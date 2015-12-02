@@ -1,0 +1,839 @@
+@import "swiper.css";
+@import "venobox.css";
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700,500);
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+@import url(https://fonts.googleapis.com/css?family=Chewy);
+/*broweserupgrad*/
+.browserupgrade{text-align: center; color:#fff; background: #000; padding: 15px 0; margin-top: -5px;}
+.browserupgrade a{color:#fff; text-decoration: underline;}
+
+/* HTML5 display-role reset for older browsers */
+html, body{
+    margin: 0;
+    padding: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+    zoom: 1;
+}
+.desktop {
+    display: none;
+}
+img{
+    border: none;
+}
+/*general css*/
+#wrapper {
+    position: relative;
+}
+.container {
+    padding: 40px 15px;
+}
+/*header css*/
+.menu, .sub-menu {
+    background-color: #f05523;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    float: left;
+    width: 262px;
+    height: 100%;
+}
+.show-menu {
+    float: left;
+    height: 58px;
+    width: 58px;
+    position: relative;
+    right: -58px;
+}
+.show .show-menu {
+    right: auto;
+}
+.logo img {
+    max-width: 100%;
+    width: auto;
+}
+header .container {
+    height: 165px;
+    padding: 0;
+}
+header nav {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 4;
+    left: -320px;
+    transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+}
+header nav.show{
+    left: 0;
+    transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+}
+header nav .show-menu > a, header nav .show-menu > a::after, header nav .show-menu > a::before {
+    background-color: #f05523;
+    border-radius: 3px;
+    bottom: 0;
+    display: block;
+    height: 5px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-indent: -10000px;
+    top: 0;
+    width: 32px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+header nav .show-menu > a::after, header nav .show-menu > a::before {
+    content: "";
+    top: -16px;
+}
+header nav .show-menu > a::before {
+    top: 8px;
+}
+header nav.show .show-menu a{
+    height: 0;
+}
+header nav.show .show-menu a::after {
+    transform: rotate(45deg) translate(6px, 7px);
+    -webkit-transform: rotate(45deg) translate(6px, 7px);
+}
+header nav.show .show-menu a::before {
+    transform: rotate(-45deg) translate(6px, -6px);
+    -webkit-transform: rotate(-45deg) translate(6px, -6px);
+}
+.logo {
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 180px;
+    z-index: 3;
+}
+nav a {
+    text-decoration: none;
+}
+.menu > li {
+    border-top: 1px solid #fff;
+}
+.menu > li > a {
+    color: #fff;
+    display: block;
+    font: bold 17px "Ubuntu",sans-serif;
+    padding: 15px;
+}
+.menu .sub-menu li a {
+    color: #f7b29c;
+    display: block;
+    font: 500 15px "Ubuntu",sans-serif;
+    padding: 0 15px 10px;
+}
+.menu > li:first-child {
+    border: medium none;
+}
+.slide-1 .swiper-container{
+    height: 180px;
+}
+.slide-1 .swiper-slide > img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.slide-1 .swiper-button-prev{
+    background: url("../images/round_but_prev.png") no-repeat 0 0;
+}
+.slide-1 .swiper-button-next{
+    background: url("../images/round_but_next.png") no-repeat 0 0;
+}
+.slide-1 .swiper-button-next, .slide-1 .swiper-button-prev {
+    background-size: contain;
+    height: 25px;
+    width: 25px;
+}
+.groups {
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 95%;
+}
+.groups > img {
+    position: absolute;
+    width: auto;
+}
+.right-center {
+    bottom: -500px;
+    max-width: 13%;
+    right: 20%;
+    transition: bottom 1s;
+    -webkit-transition: bottom 1s;
+}
+.right-center.show{
+    bottom: 9%;
+}
+.righ-top {
+    max-width: 12%;
+    right: 20%;
+    top: -300px;
+    transition: top 1s;
+    -webkit-transition: top 1s;
+}
+.righ-top.show{
+    top: 0;
+}
+.left-bottom {
+    bottom: -500px;
+    left: 2%;
+    max-width: 35%;
+    transition: bottom 1s;
+    -webkit-transition: bottom 1s;
+}
+.left-bottom.show{
+    bottom: -10px;
+}
+.groups .info {
+    display: table;
+    height: 100%;
+    position: absolute;
+    right: 5%;
+    table-layout: fixed;
+    vertical-align: middle;
+    width: 60%;
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+}
+.groups .info.show{
+    opacity: 1;
+}
+.info .info-wrap {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+.info-wrap > h4 {
+    color: #fff;
+    font: 13px "Fredoka One",cursive;
+    margin: 10px 0;
+}
+.info-wrap .note {
+    display: block;
+    font: 500 11px "ubuntu",sans-serif;
+    margin-bottom: 3%;
+}
+.info-wrap .cloud-link {
+    font-size: 10px;
+    max-width: 40%;
+}
+.swiper-pagination-bullet {
+    background-color: #fff;
+    box-shadow: 3px -1px 1px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+.slide-1 .swiper-pagination-bullet-active {
+    background: #004cd0;
+}
+.widget-wrap ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+.slide-2 a {
+    color: #000;
+    text-decoration: none;
+}
+.slide-2 h4 {
+    font: 21px "Fredoka One",cursive;
+    margin: 15px 0 0;
+    text-align: center;
+}
+.widget-wrap ul::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.widget-wrap li {
+    display: inline-block;
+    font: 500 13px "Ubuntu",sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    vertical-align: top;
+    width: 137px;
+}
+.widget-wrap li img {
+    width: 105px;
+}
+.widget-wrap li span {
+    display: block;
+    margin-top: 10px;
+}
+/*youtube css*/
+.youtube-wrap {
+    background-color: #fcca0a;
+}
+.youtube-vid img{
+    max-width: 100%;
+}
+.youtube-wrap h4 {
+    color: #f05523;
+    font: bold 40px "Ubuntu",sans-serif;
+    margin: 30px 0 0;
+}
+.youtube-wrap .note {
+    font: 500 28px "Ubuntu",sans-serif;
+}
+.yt-info > p {
+    color: #fff;
+    font: 500 18px "ubuntu",sans-serif;
+}
+.cloud-link {
+    color: #000;
+    display: inline-block;
+    font: 15px "Fredoka One",cursive;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    max-width: 100%;
+}
+.swiper-slide .info-wrap span {
+    margin-top: 0;
+}
+.cloud-link > span {
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width: 100%;
+}
+.cloud-link > img {
+    max-width: 100%;
+    width: auto;
+}
+/*scientist css*/
+.scientist {
+    background-color: #f05523;
+}
+.scientist h4 {
+    color: #fff;
+    font: 48px "Chewy",cursive;
+    margin: 15px 0;
+    text-align: center;
+}
+.scientist .note {
+    color: #fff;
+    display: block;
+    font: 16px "ubuntu",sans-serif;
+    text-align: center;
+}
+.scientist .brands {
+    list-style: none;
+    margin: 30px 0 0;
+    padding: 0;
+    text-align: center;
+}
+.scientist .brands::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.scientist .brands li {
+    display: inline-block;
+    margin-top: 10px;
+    width: 75px;
+}
+/*footer css*/
+footer{
+    padding-bottom: 40px;
+}
+.copyright {
+    color: #a5a5a5;
+    font: 100 14px "ubuntu",sans-serif;
+    text-align: center;
+}
+/*fix css of webkit*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    header nav .show-menu > a::before{
+        top: 16px;
+    }
+    header nav.show .show-menu a::before{
+        top: 20px;
+    }
+}
+@media only screen and (min-width: 640px) {
+    .slide-1 .swiper-container{
+        height: 250px;
+    }
+    .groups .info {
+        display: table;
+        height: 100%;
+        position: absolute;
+        right: 20%;
+        vertical-align: middle;
+        width: 40%;
+    }
+    .info-wrap > h4 {
+        font-size: 22px;
+    }
+    .info-wrap .note {
+        font-size: 14px;
+    }
+    /*slide 2 css*/
+    .slide-2 .desktop {
+        display: block;
+    }
+    .slide-2 .mobile {
+        display: none;
+    }
+    .slide-2 .wrap-slide {
+        margin-top: 30px;
+        position: relative;
+    }
+    .slide-2 .swiper-container {
+        width: 85%;
+    }
+    .slide-2 .swiper-slide {
+        text-align: center;
+    }
+    .slide-2 .swiper-slide img {
+        width: 115px;
+    }
+    .slide-2 .swiper-button-prev{
+        background: url("../images/nav_arrow_prev.png") no-repeat 0 0;
+        left: 0;
+    }
+    .slide-2 .swiper-button-next{
+        background: url("../images/nav_arrow_next.png") no-repeat 0 0;
+        right: 0;
+    }
+    .slide-2 .swiper-button-next, .slide-2 .swiper-button-prev {
+        background-size: contain;
+        height: 39px;
+        width: 25px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slide-1 .swiper-container{
+        height: 360px;
+    }
+    .slide-1 .swiper-button-next, .slide-1 .swiper-button-prev {
+        height: 57px;
+        width: 61px;
+    }
+    .swiper-pagination-bullet {
+        height: 15px;
+        width: 15px;
+    }
+    .swiper-container-horizontal > .swiper-pagination {
+        bottom: 25px;
+    }
+    .cloud-link {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .slide-1 .swiper-container{
+        height: 540px;
+    }
+    .info-wrap > h4 {
+        font-size: 35px;
+    }
+    .info-wrap .cloud-link {
+        font-size: 15px;
+    }
+    .info-wrap .note {
+        font-size: 17px;
+    }
+    .slide-2 .swiper-slide img {
+        width: auto;
+    }
+    .slide-2 h4 {
+        font-size: 36px;
+    }
+    .slide-2 .swiper-slide span {
+        display: block;
+        font: 14px "ubuntu";
+        margin: 10px 0 30px;
+    }
+    /*youtube css*/
+    .youtube-wrap .container {
+        text-align: left;
+    }
+    .youtube-wrap .container::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+    .youtube-vid, .yt-info {
+        display: inline-block;
+        vertical-align: top;
+        width: 47%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    /*general css*/
+    .container {
+        margin: 0 auto;
+        width: 1150px;
+    }
+    .mobile {
+        display: none!important;
+    }
+    .desktop{
+        display: block!important;
+    }
+    /*header css*/
+    header .container {
+        position: relative;
+    }
+    .logo {
+        right: auto;
+        top: 35px;
+        width: 208px;
+    }
+    header nav {
+        height: 95px;
+        left: inherit;
+        position: relative;
+        top: inherit;
+        float: right;
+    }
+    .menu {
+        background-color: transparent;
+        display: table;
+        float: none;
+        height: 100%;
+        width: auto;
+    }
+    .menu > li {
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+        padding: 0 2px;
+    }
+    .menu > li > a {
+        color: #000;
+        border-radius: 12px;
+        transition: color 0.3s, background-color 0.5s;
+    }
+    .menu > li > a:hover, .menu > li.current-menu-item > a {
+        background-color: #f05523;
+        color: #fff;
+    }
+    .menu .sub-menu li a {
+        color: #fff;
+    }
+    .menu .sub-menu li a:hover{
+        text-shadow: 0 0 2px #fff;
+    }
+    .sub-menu {
+        border-radius: 10px;
+        min-width: 100%;
+        opacity: 0;
+        padding: 12px 0 3px;
+        position: absolute;
+        top: 80px;
+        visibility: hidden;
+        transition: all 0.5s;
+    }
+    .menu > li:hover .sub-menu{
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s;
+    }
+    header .contact::after {
+        content: "";
+        display: table;
+        width: 100%;
+    }
+    header .contact ul {
+        background-color: #00aeef;
+        border-radius: 0 0 12px 12px;
+        float: right;
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+    }
+    header .contact li {
+        display: inline-block;
+    }
+    header .contact a {
+        color: #fff;
+        display: block;
+        font: bold 13px "Ubuntu",sans-serif;
+        padding: 10px 15px;
+        position: relative;
+        text-decoration: none;
+    }
+    header .contact a:hover{
+        text-shadow: 0 0 2px #fff;
+    }
+    header .contact li:first-child a::after {
+        content: "|";
+        position: absolute;
+        right: -3px;
+    }
+    .groups {
+        max-width: 1386px;
+        width: 100%;
+    }
+    .righ-top {
+        right: 265px;
+    }
+    .right-center.show {
+        bottom: 100px;
+        right: 380px;
+    }
+    .left-bottom {
+        left: 10px;
+        max-width: inherit;
+    }
+    .groups .info {
+        right: 140px;
+        width: 575px;
+    }
+    .info-wrap > h4 {
+        font-size: 45px;
+        width: 500px;
+    }
+    .info-wrap .note {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    .info-wrap .cloud-link {
+        font-size: 22px;
+    }
+    .cloud-link{
+        transition: color 0.3s;
+        -webkit-transition: color 0.3s;
+    }
+    .cloud-link:hover{
+        color: red;
+        transition: color 0.3s;
+        -webkit-transition: color 0.3s;
+    }
+    .swiper-button-prev {
+        left: 33px;
+    }
+    .swiper-button-next {
+        right: 33px;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        top: 41%;
+    }
+    .slide-2 .swiper-container {
+        width: 1020px;
+    }
+    .slide-2 h4 {
+        margin: 0;
+        padding: 40px 0;
+    }
+    .slide-2 .swiper-slide span{
+        font-size: 16px;
+    }
+    .slide-2 .swiper-slide {
+        cursor: pointer;
+        padding: 5px 0;
+    }
+    .slide-2 .swiper-slide:hover img {
+        -webkit-animation: scaledown 2s;
+        animation: scaledown 2s;
+    }
+    .slide-2 .swiper-button-next, .slide-2 .swiper-button-prev {
+        height: 67px;
+        width: 39px;
+    }
+    footer {
+        padding: 25px 0 65px;
+    }
+    .copyright {
+        margin: 0;
+    }
+}
+@keyframes scaledown {
+    0% {
+        transform: scale(0.6);
+    }
+    15% {
+        transform: scale(1.05);
+    }
+    25% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes scaledown {
+    0% {
+        transform: scale(0.6);
+    }
+    15% {
+        transform: scale(1.05);
+    }
+    25% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*ie8 fix*/
+/*general css*/
+.lt-ie9 .container {
+    margin: 0 auto;
+    width: 1150px;
+}
+.lt-ie9 .mobile {
+    display: none!important;
+}
+.lt-ie9 .desktop{
+    display: block!important;
+}
+/*header css*/
+.lt-ie9 header .container {
+    position: relative;
+}
+
+.lt-ie9 .logo {
+    right: auto;
+    width: 208px;
+}
+.lt-ie9 header nav {
+    height: 95px;
+    left: inherit;
+    position: relative;
+    top: inherit;
+    float: right;
+}
+.lt-ie9 .menu {
+    background-color: transparent;
+    display: table;
+    float: none;
+    height: 100%;
+    width: auto;
+}
+.lt-ie9 .menu > li {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    padding: 0 2px;
+}
+.lt-ie9 .menu > li > a {
+    color: #000;
+    border-radius: 12px;
+    transition: color 0.3s, background-color 0.5s;
+    -webkit-transition: color 0.3s, background-color 0.5s;
+}
+.lt-ie9 .menu > li > a:hover, .lt-ie9 .menu > li.current-menu-item > a {
+    background-color: #f05523;
+    color: #fff;
+}
+.lt-ie9 .menu .sub-menu li a {
+    color: #fff;
+}
+.lt-ie9 .menu .sub-menu li a:hover{
+    text-shadow: 0 0 2px #fff;
+}
+.lt-ie9 .sub-menu {
+    border-radius: 10px;
+    min-width: 100%;
+    opacity: 0;
+    padding: 12px 0 3px;
+    position: absolute;
+    top: 80px;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.lt-ie9 .menu > li:hover .sub-menu{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+.lt-ie9 header .contact::after {
+    content: "";
+    display: table;
+    width: 100%;
+}
+.lt-ie9 header .contact ul {
+    background-color: #00aeef;
+    border-radius: 0 0 12px 12px;
+    float: right;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.lt-ie9 header .contact li {
+    display: inline-block;
+}
+.lt-ie9 header .contact a {
+    color: #fff;
+    display: block;
+    font: bold 13px "Ubuntu",sans-serif;
+    padding: 10px 15px;
+    position: relative;
+    text-decoration: none;
+}
+.lt-ie9 header .contact a:hover{
+    text-shadow: 0 0 2px #fff;
+}
+.lt-ie9 header .contact li:first-child a::after {
+    content: "|";
+    position: absolute;
+    right: -3px;
+}
+.lt-ie9 .groups {
+    max-width: 1386px;
+    width: 100%;
+}
+.lt-ie9 .righ-top {
+    right: 265px;
+}
+.lt-ie9 .right-center.show {
+    bottom: 100px;
+    right: 420px;
+}
+.lt-ie9 .left-bottom {
+    left: 25px;
+}
+.lt-ie9 .groups .info {
+    right: 172px;
+    width: 575px;
+}
+.lt-ie9 .info-wrap > h4 {
+    font-size: 45px;
+    width: 500px;
+}
+.lt-ie9 .info-wrap .note {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.lt-ie9 .info-wrap .cloud-link {
+    font-size: 22px;
+}
+.lt-ie9 .cloud-link{
+    transition: color 0.3s;
+}
+.lt-ie9 .cloud-link:hover{
+    color: red;
+    transition: color 0.3s;
+}
