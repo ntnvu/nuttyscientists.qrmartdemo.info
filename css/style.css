@@ -1,6 +1,6 @@
 @import "swiper.css";
 @import "venobox.css";
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:700,500);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700,500,300);
 @import url(https://fonts.googleapis.com/css?family=Fredoka+One);
 @import url(https://fonts.googleapis.com/css?family=Chewy);
 /*broweserupgrad*/
@@ -28,12 +28,27 @@ footer, header, hgroup, menu, nav, section {
 img{
     border: none;
 }
+.orange {
+    color: #f05523;
+}
+.blue{
+	color: #00aeef;
+}
+.yellow{
+	color: #fcca0a;
+}
+.dark_blue{
+	color: #0f5975;
+}
 /*general css*/
+body {
+    font: 14px "Ubuntu";
+}
 #wrapper {
     position: relative;
 }
 .container {
-    padding: 40px 15px;
+    padding: 40px 20px;
 }
 /*header css*/
 .menu, .sub-menu {
@@ -358,6 +373,206 @@ nav a {
     margin-top: 10px;
     width: 75px;
 }
+/*subpage css*/
+.pages {
+    padding-bottom: 110px;
+}
+.banner-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.element-content ul {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+.element-title {
+    font: 22px "Fredoka One";
+    margin: 30px 0;
+    width: 250px;
+}
+.element.first .element-title {
+    font-size: 27px;
+	margin-top: 0;
+}
+.element-content {
+    color: #797979;
+    font: 300 18px/30px "Ubuntu";
+}
+.pages .last {
+    display: table;
+    height: 140px;
+    margin: 40px auto;
+    max-width: 353px;
+    position: relative;
+    text-align: center;
+}
+.last-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+.pages .last .element-title {
+    font-size: 21px;
+    margin: 0;
+	width: auto;
+}
+.pages .last > img {
+    left: 0;
+    max-width: 353px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.pages .last .element-content {
+    color: #000;
+    font: italic bold 18px/25px "ubuntu";
+    margin: 5px auto 0;
+    width: 80%;
+}
+/*banner subpage css*/
+.banner-wrapper {
+    height: 183px;
+    overflow: hidden;
+    position: relative;
+}
+.banner-wrapper > div {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.banner-wrapper .banner-content {
+    bottom: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font: 12px "Ubuntu";
+    height: auto;
+    padding: 0 15px 10px;
+    top: auto;
+	z-index: 2;
+}
+.banner-content .title {
+    font: 23px "Fredoka One";
+    margin: 0;
+}
+.img-wrap {
+    border-radius: 15px;
+    display: inline-block;
+    height: 210px;
+    margin: 20px auto 0;
+    max-width: 287px;
+    overflow: hidden;
+    width: 100%;
+}
+.group-img {
+    text-align: center;
+}
+.group-img::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.img-wrap > img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+/** our-program css */
+.box-orange {
+    background-color: #f05523;    
+}
+.group-box {
+    border-radius: 25px;
+    margin-top: 30px;
+    padding: 30px 15px;
+}
+.group-box .element-title {
+    margin: 0;
+}
+.group-box .element-title img {
+    display: block;
+    margin: 0 0 10px 50px;
+}
+.group-box .element-title.dark_blue img {
+    margin-left: 0;
+}
+.group-box hr {
+    background-color: #fff;
+    border: medium none;
+    height: 1px;
+    margin-top: 25px;
+}
+.group-box .element-content {
+    color: #fff;
+    padding: 0 15px;
+}
+.group-box ol {
+    margin: 0;
+    padding: 0;
+}
+.group-box ol li {
+    margin-top: 25px;
+    padding-left: 10px;
+}
+.box-blue {
+    background-color: #00aeef;
+}
+.group-box.gray {
+    padding-right: 0;
+}
+.group-box.gray .element-content {
+    color: #797979;
+    padding: 0;
+}
+.group-box.gray .element-content ul {
+    list-style: outside none disc;
+    padding-left: 15px;
+}
+.group-box .element-content li {
+    margin-top: 15px;
+    padding-left: 5px;
+}
+.our-programs .pages {
+    text-align: left;
+}
+.our-programs .element.last {
+    height: 89px;
+    padding: 0;
+    width: 285px;
+}
+.our-programs .last .element-content {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.our-programs .element.last a {
+    color: #000;
+    display: table-cell;
+    font: 22px "Fredoka One";
+    transition: color 0.5s ease 0s;
+	-webkit-transition: color 0.5s ease 0s;
+    vertical-align: middle;
+}
+.our-programs .element.last a:hover {
+    color: red;
+}
+.our-programs .element.last a > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.our-programs .element.last a img {
+    margin-right: 5px;
+}
+.group-box-column .group-box {
+    margin-top: 0;
+    padding: 20px 15px;
+}
+.group-box-column .group-box:first-child {
+    margin-top: 20px;
+}
 /*footer css*/
 footer{
     padding-bottom: 40px;
@@ -375,6 +590,11 @@ footer{
     header nav.show .show-menu a::before{
         top: 20px;
     }
+}
+@media only screen and (min-width: 480px) {
+	.pages .last{
+		height: 172px;
+	}
 }
 @media only screen and (min-width: 640px) {
     .slide-1 .swiper-container{
@@ -427,6 +647,64 @@ footer{
         height: 39px;
         width: 25px;
     }
+	/* pages css */
+	.banner-wrapper {
+		height: 250px;
+	}
+	.element-title {
+		width: auto;
+	}
+	.pages {
+		text-align: center;
+	}		
+	/* group box css */
+	.element.first {
+		text-align: center;
+	}
+	.group-box {
+		padding: 30px 60px;
+	}	
+	.banner-content-inner {
+		font-size: 20px;
+		text-align: center;
+	}
+	.banner-content .title {
+		font-size: 30px;
+		margin: 0 auto;
+		width: 500px;
+	}
+	.group-box .element-title > * {
+		display: inline-block;
+		vertical-align: middle;
+	}	
+	.group-box .element-title img {
+		display: inline-block;
+		margin: 0 10px 0 0;
+	}
+	.group-box-column {
+		display: table;
+		padding: 30px 0;
+	}	
+	.group-box-column .group-box {
+		border-left: 1px solid #c7c7c7;
+		border-radius: 0;
+		box-sizing: border-box;
+		display: table-cell;
+		padding: 0 45px;
+		vertical-align: top;
+		width: 50%;
+	}
+	.group-box-column .group-box:first-child {
+		border: medium none;
+	}
+	.banner-wrapper .banner-content {
+		height: 100%;
+		display: table
+	}
+	.banner-content-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -447,6 +725,32 @@ footer{
     .cloud-link {
         font-size: 22px;
     }
+	/**pages css*/
+	.banner-wrapper {
+		height: 300px;
+	}	
+	.banner-wrapper img.mobile {
+		display: none;
+	}
+	.banner-wrapper img.desktop {
+		display: block;
+	}
+	.banner-wrapper .banner-content {
+		left: auto;
+		right: 0;
+		width: 55%;
+	}	
+	.banner-content .title {
+		font-size: 35px;
+		margin: 0;
+		width: 390px;
+	}
+	.banner-wrapper .banner-content {
+		font-size: 22px;
+	}
+	.banner-content-inner {
+		text-align: left;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -486,7 +790,8 @@ footer{
         display: inline-block;
         vertical-align: top;
         width: 47%;
-    }
+    }	
+	
 }
 @media only screen and (min-width: 1200px) {
     /*general css*/
@@ -667,6 +972,14 @@ footer{
     .copyright {
         margin: 0;
     }
+	/** pages css */
+	.banner-wrapper {
+		height: 360px;
+	}
+	.banner-content .title {
+		font-size: 45px;
+		width: 500px;
+	}
 }
 @keyframes scaledown {
     0% {
