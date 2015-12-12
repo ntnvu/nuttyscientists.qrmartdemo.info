@@ -6,6 +6,7 @@
                 loop: true,
                 // If we need pagination
                 pagination: '.swiper-pagination',
+                paginationClickable: 'true',
 
                 // Navigation arrows
                 nextButton: '.slide-1 .swiper-button-next',
@@ -29,7 +30,7 @@
                 spaceBetweenSlides: 10,
                 // Responsive breakpoints
                 breakpoints: {
-                    640: {
+                    800: {
                         slidesPerView: 4
                     },
                     1024: {
