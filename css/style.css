@@ -567,9 +567,6 @@ nav a {
 	-webkit-transition: color 0.5s ease 0s;
     vertical-align: middle;
 }
-.our-programs .element.last a{
-	padding-top: 17px;
-}
 .our-programs .element.last a:hover {
     color: red;
 }
@@ -607,7 +604,6 @@ footer{
 }
 @media only screen and (min-width: 480px) {
 	.pages .container .last {
-		height: 172px;
 		margin-top: 40px;
 	}
 }
@@ -1050,7 +1046,12 @@ footer{
         transform: scale(1);
     }
 }
-
+.lt-ie9 .pages .container .last{
+	height: 172px;
+}
+.lt-ie9 .our-programs .element.last a{
+	padding-top: 17px;
+}
 .lt-ie9 header .contact{
 	height: 37px;
 }
